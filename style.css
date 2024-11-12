@@ -1,0 +1,487 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Variables globales */
+:root {
+    --gold-primary: #d4af37;
+    --gold-secondary: #97833f;
+    --cream: #f5f5dc;
+    --dark-bg: #1c1a1a;
+    --text-light: #bfc7d5;
+}
+
+body{
+    background-color: rgb(28, 26, 26);
+    color: beige;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal no deseado */
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    
+}
+
+.header{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('imag/fondo2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+}
+
+.header-content {
+    width: 100%;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: var(--cream);
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    margin-top: -10px;
+    letter-spacing: 1px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center ;
+    margin-top: 40px;
+}
+
+nav ul li {
+    margin: 0 55px;
+    
+}
+
+
+nav ul li a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold-primary);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* leyenda */
+
+.Leyenda{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.txt-p{
+    font-size: 30px;
+    font-style: italic;
+    margin: auto;
+    color: #97833f;
+    position: relative;
+    padding: 40px;
+    max-width: 900px;
+    font-family: 'Cormorant Garamond', serif;
+    
+}
+
+.txt-p::before,
+.txt-p::after {
+    content: '"';
+    font-size: 4rem;
+    color: #97833f;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.txt-p::before {
+    top: 0;
+    left: 0;
+}
+
+.txt-p::after {
+    bottom: -20px;
+    right: 0;
+}
+
+/* diseño de circulo y linea */
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+.divider::before, 
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #d4af37; /* Color dorado */
+}
+
+.divider .circle {
+    width: 12px;
+    height: 12px;
+    background-color: black; /* Fondo negro */
+    border: 2px solid #d4af37; /* Borde dorado */
+    border-radius: 50%;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+
+/* Sección de "Nosotros" */
+.about-section {
+    padding: 80px 20px;
+}
+
+.general1 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(149, 119, 44, 0.05);
+    border-radius: 20px;
+
+}
+
+.about-text {
+    flex: 1;
+}
+
+
+.about-text h2 {
+    color: #d4af37;
+    font-size: 33px;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    margin-left: 38px;
+    margin-right: 38px;
+    text-align: center;
+    color: beige;
+    
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/*Seccion de Galería */
+
+#galeria {
+    text-align: center;
+}
+
+#galeria h2 {
+    color: #d4af37;
+    font-size: 33px;
+    margin-bottom: 40px;
+}
+
+
+
+
+.galeria-img{
+    width: 350px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px; /* Bordes redondeados opcionales */
+    overflow: hidden;
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-right: 10px;
+    opacity: .9;
+    transition: .5s ease;
+    
+}
+
+.galeria-img:hover{
+    width: 399.9px;
+    opacity: 1;
+    filter:contrast(120%);
+}
+
+.galeria img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor sin distorsión */
+}
+
+
+/*Seccion de promociones*/
+
+.promocontent {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 60px 10px;
+    background: rgba(149, 119, 44, 0.05);
+    border-radius: 20px;
+}
+
+.promocontent h2 {
+    font-size: 33px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #d4af37;
+}
+
+
+.promo-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.promo {
+    width: 350px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #d4af37;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 20px;
+    
+}
+
+.promo:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.promo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    margin-top: 0;
+    transition: transform 0.5s ease;
+}
+
+.promo:hover img {
+    transform: scale(1.05);
+}
+
+.promo p {
+    font-size: 14px;
+    line-height: 1.0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin: 0;
+    color: rgb(14, 14, 14);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.promo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.02) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.promo:hover::before {
+    opacity: 1;
+}
+
+/* Etiqueta de promoción */
+.promo::after {
+    content: 'PROMOCIÓN';
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: #d4af37;
+    color: white;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* Seccion de informacion esencial */
+
+.informacion {
+    text-align: center;
+    color: #97833f;
+    margin: 50px 0;
+    
+}
+
+.informacion h2 {
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #d4af37;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.columna {
+    width: 20%;
+    text-align: left;
+    position: relative;
+    margin-right: 5px;
+}
+
+.titulo {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #bfc7d5;
+}
+
+.linea {
+    width: 50px;
+    height: 1px;
+    background-color: #bfc7d5; /* Color de la línea */
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    background: linear-gradient(#12100c, #0a0908);
+    padding: 80px 20px 40px;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.links h3 {
+    color: var(--gold-primary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.links ul {
+    list-style: none;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: var(--gold-primary);
+}
+
+
+
+/* Media queries */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .general1 {
+        flex-direction: column;
+    }
+
+    .txt-p {
+        font-size: 1.4rem;
+        padding: 20px;
+    }
+}
