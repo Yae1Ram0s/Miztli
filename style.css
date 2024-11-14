@@ -130,7 +130,7 @@ nav ul li a:hover::after {
     
 }
 
-/* Pseudo-elementos ::before y ::after de .txt-p */
+/* Pseudo-elementos de las comillas de .txt-p */
 .txt-p::before,
 .txt-p::after {
     content: '"'; /* Agrega comillas al principio y al final del texto */
@@ -141,13 +141,13 @@ nav ul li a:hover::after {
 }
 
 .txt-p::before {
-    top: 0;
+    top: -19px;
     left: 0;
 }
 
 .txt-p::after {
-    bottom: -20px;
-    right: 0;
+    bottom: -19px;
+    right: 36px;
 }
 
 
