@@ -479,6 +479,10 @@ p {
     color: var(--gold-primary); /* Cambia el color al dorado primario en hover */
 }
 
+.footer img{
+    width: 22px;
+}
+
 
 /* Media queries */
 @media (max-width: 768px) {
