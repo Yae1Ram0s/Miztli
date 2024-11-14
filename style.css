@@ -4,24 +4,26 @@ html {
 
 /* Variables globales */
 :root {
-    --gold-primary: #d4af37;
-    --gold-secondary: #97833f;
+    --gold-primary: #d4af37; /* Definición de color dorado principal */
+    --gold-secondary: #97833f; /* Definición de color dorado secundario */
     --cream: #f5f5dc;
-    --dark-bg: #1c1a1a;
-    --text-light: #bfc7d5;
+    --dark-bg: #1c1a1a; /* Color de fondo oscuro */
+    --text-light: #bfc7d5; /* Color de texto claro */
 }
 
+/* Estilo global del cuerpo */
 body{
     background-color: rgb(28, 26, 26);
     color: beige;
-    margin: 0;
+    margin: 0; /* Elimina márgenes y relleno predeterminados */
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Evita el scroll horizontal no deseado */
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', serif; /* Fuente para el contenido principal */
 
 }
 
+/* Estilos generales para todos los elementos */
 *{
     margin: 0;
     padding: 0;
@@ -30,16 +32,17 @@ body{
     list-style: none;
 }
 
+/* Contenedor centralizado con ancho máximo */
 .container{
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;  
 }
 
-
+/* Estilos para el encabezado */
 .header{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('imag/fondo2.png');
+                url('imag/fondo2.png'); /* Fondo con gradiente oscuro sobre una imagen */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,11 +54,13 @@ body{
     width: 100%;
 }
 
+/* Contenido dentro del encabezado */
 .header-content {
     width: 100%;
     padding: 20px;
 }
 
+/* Título principal dentro del encabezado */
 header h1 {
     font-size: 5rem;
     font-weight: 300;
@@ -64,14 +69,16 @@ header h1 {
     margin-bottom: 20px;
 }
 
+/* Párrafo en el encabezado */
 header p {
     font-size: 1.2rem;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Estilo de la fuenta */
     margin-top: -10px;
     letter-spacing: 1px;
     
 }
 
+/* Estilos de la navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -79,6 +86,7 @@ nav ul {
     margin-top: 40px;
 }
 
+/* Estilos de los elementos de la lista en el menú de navegación */
 nav ul li {
     margin: 0 55px;
     
@@ -89,24 +97,26 @@ nav ul li a {
     color: var(--cream);
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Efecto de transición en el color */
     padding: 5px 0;
     position: relative;
 }
 
+/* Línea decorativa debajo de cada enlace */
 nav ul li a::after {
-    content: '';
+    content: ''; /* Línea decorativa vacía */
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--gold-primary);
-    transition: width 0.3s ease;
+    background-color: var(--gold-primary); /* Color dorado */
+    transition: width 0.3s ease; /* Efecto de transición al hacer hover */
 }
 
+/* Efecto hover para expandir la línea decorativa */
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%; /* Expande la línea al ancho completo */
 }
 
 
@@ -407,6 +417,11 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+}
+
+.columna a{
+    list-style: none;
+    color: var(--text-light);
 }
 
 /* Estilos para cada columna individual */
