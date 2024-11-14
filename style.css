@@ -486,7 +486,21 @@ p {
         font-size: 3rem;
     }
 
-   /* Centrar columnas y ajustar el tamaño en .columnas */
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .general1 {
+        flex-direction: column;
+    }
+
+    .txt-p {
+        font-size: 1.4rem;
+        padding: 20px;
+    }
+
+    /* Centrar columnas y ajustar el tamaño en .columnas */
     .columnas {
         flex-direction: column;
         align-items: center;
@@ -519,4 +533,3 @@ p {
         grid-template-columns: 1fr; /* Una sola columna */
         gap: 20px;
     }
-}
